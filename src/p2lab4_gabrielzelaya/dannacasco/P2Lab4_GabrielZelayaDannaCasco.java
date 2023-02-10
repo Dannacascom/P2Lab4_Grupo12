@@ -13,7 +13,8 @@ public class P2Lab4_GabrielZelayaDannaCasco {
     public static Pieza[][] matriz = new Pieza[8][8];
 
     public static void main(String[] args) {
-
+        llenarMatriz(matriz);
+        imprimirTablero(matriz);
     }
 
     public static void imprimirTablero(Pieza[][] matriz) {
@@ -22,32 +23,75 @@ public class P2Lab4_GabrielZelayaDannaCasco {
                 if (matriz[i][j] != null) {
                     if (matriz[i][j] instanceof Alfil) {
                         if (matriz[i][j].getColor().equals("Negro")) {
-                            System.out.println("[b]");
+                            System.out.print("[b]");
                         } else {
-                            System.out.println("[B]");
+                            System.out.print("[B]");
+                        }
+                    }else if(matriz[i][j] instanceof Torre){
+                        if (matriz[i][j].getColor().equals("Negro")) {
+                            System.out.print("[r]");
+                        } else {
+                            System.out.print("[R]");
+                        }
+                    }else if(matriz[i][j] instanceof Caballo){
+                        if (matriz[i][j].getColor().equals("Negro")) {
+                            System.out.print("[n]");
+                        } else {
+                            System.out.print("[N]");
+                        }
+                    }else if(matriz[i][j] instanceof Rey){
+                        if (matriz[i][j].getColor().equals("Negro")) {
+                            System.out.print("[k]");
+                        } else {
+                            System.out.print("[K]");
+                        }
+                    }else if(matriz[i][j] instanceof Reina){
+                        if (matriz[i][j].getColor().equals("Negro")) {
+                            System.out.print("[q]");
+                        } else {
+                            System.out.print("[Q]");
+                        }
+                    }else if(matriz[i][j] instanceof Peon){
+                        if (matriz[i][j].getColor().equals("Negro")) {
+                            System.out.print("[p]");
+                        } else {
+                            System.out.print("[P]");
                         }
                     }
                 }else{
                     System.out.print("[ ]");
                 }
             }
+            System.out.println("");
         }
     }
 
-    public static void llenarMatriz() {
+    public static void llenarMatriz(Pieza[][] matriz) {
         Pieza torreBlanco = new Torre();
+        torreBlanco.setColor("Blanco");
         Pieza caballoBlanco = new Caballo();
+        caballoBlanco.setColor("Blanco");
         Pieza alfilBlanco = new Alfil();
+        alfilBlanco.setColor("Blanco");
         Pieza reinaBlanco = new Reina();
+        reinaBlanco.setColor("Blanco");
          Pieza reyBlanco = new Rey();
+         reyBlanco.setColor("Blanco");
         Pieza peonBlanco = new Peon();
+        peonBlanco.setColor("Blanco");
 
         Pieza torreNegro = new Torre();
+        torreNegro.setColor("Negro");
         Pieza caballoNegro = new Caballo();
+        caballoNegro.setColor("Negro");
         Pieza alfilNegro = new Alfil();
+        alfilNegro.setColor("Negro");
         Pieza reinaNegro = new Reina();
+        reinaNegro.setColor("Negro");
         Pieza reyNegro = new Rey();
+        reyNegro.setColor("Negro");
         Pieza peonNegro = new Peon();
+        peonNegro.setColor("Negro");
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
