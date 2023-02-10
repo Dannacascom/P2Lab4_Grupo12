@@ -1,4 +1,4 @@
-package p2lab4_gabrielzelaya.dannacasco;
+package pieza;
 
 import pieza.Pieza;
 

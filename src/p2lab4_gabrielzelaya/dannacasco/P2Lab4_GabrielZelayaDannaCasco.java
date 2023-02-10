@@ -1,5 +1,6 @@
 package p2lab4_gabrielzelaya.dannacasco;
 
+import pieza.Rey;
 import pieza.Alfil;
 import pieza.Caballo;
 import pieza.Peon;
