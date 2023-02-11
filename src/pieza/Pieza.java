@@ -5,6 +5,15 @@ public abstract class Pieza {
     protected int x;
     protected int y;
     protected String color;
+    protected char nombre;
+
+    public char getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(char nombre) {
+        this.nombre = nombre;
+    }
 
     public Pieza() {
     }
@@ -15,7 +24,7 @@ public abstract class Pieza {
         this.color = color;
     }
     
-    public abstract boolean movimiento(int x, int y);
+    public abstract boolean movimiento(int xDestino, int yDestino, int xOrigen, int yOrigen);
     
     public int getX() {
         return x;

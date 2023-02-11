@@ -7,8 +7,8 @@ public class Alfil extends Pieza{
     }
 
     @Override
-    public boolean movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean movimiento(int xDestino, int yDestino, int xOrigen, int yOrigen) {
+        return Math.abs(xDestino-xDestino) == Math.abs(yDestino - yOrigen);
     }
     
 }

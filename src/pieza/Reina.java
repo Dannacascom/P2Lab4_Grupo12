@@ -7,8 +7,10 @@ public class Reina extends Pieza{
     }
 
     @Override
-    public boolean movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean movimiento(int xDestino, int yDestino, int xOrigen, int yOrigen) {
+        if (xDestino == xOrigen || yOrigen == yDestino) {
+            return true;
+        }
+        return Math.abs(xOrigen - xDestino) == Math.abs(yOrigen - yDestino);
     }
-    
 }

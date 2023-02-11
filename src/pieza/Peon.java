@@ -7,9 +7,9 @@ public class Peon extends Pieza {
     }
 
     @Override
-    public boolean movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean movimiento(int xDestino, int yDestino, int xOrigen, int yOrigen) {
+    return (xDestino == xOrigen && yDestino == yOrigen + 1 || 
+            xDestino == xOrigen && yDestino == yOrigen + 2 && yOrigen == 1) || (xDestino == xOrigen && yDestino == yOrigen - 1 
+            || xDestino == xOrigen && yDestino == yOrigen - 2 && yOrigen == 6);
     }
-    
-    
 }

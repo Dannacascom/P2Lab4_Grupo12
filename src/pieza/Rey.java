@@ -1,7 +1,5 @@
 package pieza;
 
-import pieza.Pieza;
-
 public class Rey extends Pieza {
 
     public Rey() {
@@ -9,8 +7,7 @@ public class Rey extends Pieza {
     }
 
     @Override
-    public boolean movimiento(int x, int y) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public boolean movimiento(int xDestino, int yDestino, int xOrigen, int yOrigen) {
+        return Math.abs(xOrigen - xDestino) <= 1 && Math.abs(yOrigen - yDestino) <= 1;
     }
-    
 }
